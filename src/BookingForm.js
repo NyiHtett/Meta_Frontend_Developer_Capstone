@@ -23,14 +23,13 @@ const BookingForm = ({
         id="res-date"
         value={formatData.date}
         onChange={(e) => {
-            handleFormChange("date", e.target.value);
-            var date = new Date(e.target.value);
-            if(date.getDay() == 5 || date.getDay() == 6) {
-                updateWeekendTimes()
-            }
-            else {
-                updateWeekDayTimes()
-            }
+          handleFormChange("date", e.target.value);
+          var date = new Date(e.target.value);
+          if (date.getDay() == 5 || date.getDay() == 6) {
+            updateWeekendTimes();
+          } else {
+            updateWeekDayTimes();
+          }
         }}
       ></input>
 
@@ -40,7 +39,6 @@ const BookingForm = ({
         value={formatData.time}
         onChange={(e) => handleFormChange("time", e.target.value)}
       >
-
         {availableTimes.length > 0 ? (
           availableTimes.map((time) => <option>{time}</option>)
         ) : (
