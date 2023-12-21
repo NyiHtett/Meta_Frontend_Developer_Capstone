@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BookingForm from "../BookingForm";
+import BookingForm from "./BookingForm";
 import { submitAPI } from "../utils/Api";
 import ConfirmedBooking from "../ConfirmedBooking";
 

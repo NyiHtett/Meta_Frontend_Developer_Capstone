@@ -1,6 +1,5 @@
 import React from "react";
 import img from "../assets/Logo.png";
-import "../App.css";
 import Main from "../pages/Main";
 import { Router, Route, Routes, Link } from "react-router-dom";
 
@@ -9,9 +8,9 @@ const Nav = () => {
   return (
     <nav>
       {/* logo image */}
-      <a>
+      <Link to="/">
         <img src={img} width={300} alt="little lemon logo image" />
-      </a>
+      </Link>
 
       {/* navigation links */}
       <div className="nav-links-group">

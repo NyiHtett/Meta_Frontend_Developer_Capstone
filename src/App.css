@@ -2,6 +2,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-color: #edefee;
 }
 
 .nav-links-group {
@@ -19,10 +20,48 @@ nav {
   color: black;
   font-size: 20px;
   transition: background-color 0.5s;
-  
+
 }
 
 .nav-item:hover {
   background-color: #F4ce14;
-  
+}
+
+.HeroSection {
+  width: 90%;
+  height: 300px;
+  border-radius: 10px;
+  margin: 16px auto;
+  padding: 50px;
+  background-color: #495E57;
+  color: white;
+  display: flex;
+  position: relative;
+}
+
+.HeroSection .restaurantImage{
+  position: absolute;
+  border-radius: 16px;
+  top: 20%;
+  right: 5%;
+}
+
+.HeroTextRegion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.HeroTextRegion h2 {
+  color: #F4ce14;
+}
+
+.HeroTextRegion p{
+  width: 50%;
+  text-wrap:wrap;
+}
+
+.HeroTextRegion button{
+  width: 20%;
+  text-wrap:wrap;
 }
