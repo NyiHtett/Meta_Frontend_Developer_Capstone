@@ -18,6 +18,21 @@ const BookingForm = ({
       }}
     >
       <label for="res-date">Current Date: </label>
+      {!(formatData.date === "") ? (
+        <></>
+      ) : (
+        <p
+          style={{
+            color: "red",
+            fontSize: "10px",
+            width: "80%",
+            alignItems: "center",
+          }}
+        >
+          {" "}
+          select a date
+        </p>
+      )}
       <input
         type="date"
         id="res-date"
@@ -47,6 +62,21 @@ const BookingForm = ({
       </select>
 
       <label for="guests"> Number of guests: </label>
+      {!(formatData.guest <= 1) ? (
+        <></>
+      ) : (
+        <p
+          style={{
+            color: "red",
+            fontSize: "10px",
+            width: "80%",
+            alignItems: "center",
+          }}
+        >
+          {" "}
+          more than one guest is required
+        </p>
+      )}
       <input
         type="number"
         placeholder="1"
@@ -56,8 +86,9 @@ const BookingForm = ({
         value={formatData.guest}
         onChange={(e) => handleFormChange("guest", e.target.value)}
       />
+      
 
-      <label for="occasion"> Occasion</label>
+      <label for="occasion"> Occasion: </label>
       <select
         id="occasion"
         value={formatData.occasion}

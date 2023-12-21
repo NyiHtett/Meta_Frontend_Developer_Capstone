@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import BookingForm from "./BookingForm";
-import { submitAPI } from "./utils/Api";
-import ConfirmedBooking from "./ConfirmedBooking";
+import BookingForm from "../BookingForm";
+import { submitAPI } from "../utils/Api";
+import ConfirmedBooking from "../ConfirmedBooking";
 
 const BookingPage = (props) => {
   const [confirm, setConfirm] = useState(false);
@@ -14,6 +14,10 @@ const BookingPage = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(formatData.date === "" || formatData.guest <= 1) {
+        alert("fill out the required fields");
+        return;
+    }
     console.log("form submitted", formatData);
     setConfirm(submitAPI(formatData));
   };

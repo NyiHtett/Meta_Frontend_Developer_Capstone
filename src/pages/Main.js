@@ -1,6 +1,7 @@
 import React, { useEffect, useReducer, useState } from "react";
-import BookingPage from "./BookingPage";
-import { fetchAPI, submitAPI } from "./utils/Api";
+import BookingPage from "../components/BookingPage";
+import { fetchAPI, submitAPI } from "../utils/Api";
+import Header from "../components/Header";
 function reducer(state, action) {
   if (action.type === "UPDATE WEEKEND") {
     return {
@@ -33,6 +34,7 @@ const Main = () => {
 
   return (
     <>
+      <Header/>
       <BookingPage
         availableTimes={availableTimes}
         updateWeekendTimes={updateWeekendTimes}
