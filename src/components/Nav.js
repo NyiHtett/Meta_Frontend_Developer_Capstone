@@ -26,6 +26,9 @@ const Nav = () => {
         <Link to="/Reserve" className="nav-item">
           Reserve
         </Link>
+        <Link to="/Checkout" className="nav-item">
+          Checkout
+        </Link>
       </div>
     </nav>
   );

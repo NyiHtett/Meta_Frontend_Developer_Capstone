@@ -8,6 +8,7 @@ import Main from './pages/Main';
 import About from './pages/About';
 import Menu from './pages/Menu';
 import Reserve from './pages/Reserve';
+import Checkout from './pages/Checkout';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path:"/Reserve",
     element: <layout><Reserve/></layout>
+  },
+  {
+    path:"/Checkout",
+    element: <layout><Checkout/></layout>
   },
 ])
 
