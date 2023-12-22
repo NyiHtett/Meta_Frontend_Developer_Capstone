@@ -20,7 +20,7 @@ nav {
   color: black;
   font-size: 20px;
   transition: background-color 0.5s;
-
+  
 }
 
 .nav-item:hover {
@@ -37,13 +37,13 @@ nav {
   color: white;
   display: flex;
   position: relative;
+  margin-bottom: 100px;
 }
 
 .HeroSection .restaurantImage{
-  position: absolute;
+  position: relative;
   border-radius: 16px;
-  top: 20%;
-  right: 5%;
+  margin-left: 200px;
 }
 
 .HeroTextRegion {

@@ -18,12 +18,11 @@ const HeroSection = () => {
         </Link>
       </div>
 
-      
         <img
           class="restaurantImage"
           src={img}
           alt="restaurant indoor image"
-          width={200}
+          height={300}
         />
     </div>
   );

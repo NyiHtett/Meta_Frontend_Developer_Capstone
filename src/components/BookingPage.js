@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BookingForm from "./BookingForm";
 import { submitAPI } from "../utils/Api";
-import ConfirmedBooking from "../ConfirmedBooking";
+import ConfirmedBooking from "./ConfirmedBooking";
 
 const BookingPage = (props) => {
   const [confirm, setConfirm] = useState(false);
