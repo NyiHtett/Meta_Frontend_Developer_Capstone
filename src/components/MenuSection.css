@@ -1,0 +1,10 @@
+.MenuSectionCatalog {
+    padding: 20px;
+    cursor:pointer;
+    font-size: 16px;
+}
+
+.MenuSectionCatalog:hover {
+    background-color: #F4ce14;
+    border-radius: 10px;
+}

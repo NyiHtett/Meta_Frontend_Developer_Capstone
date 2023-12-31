@@ -1,13 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import { Catalog } from "../utils/Catalog";
+import './MenuSection.css';
 import { Juice } from "../utils/Juice";
 const MenuSection = () => {
+  const [catalog, pickCatalog] = useState(0);
   return (
     <div class="container d-flex flex-row" style={{margin:0, padding: 0}}>
       <div class="panel1 col-4" style={{backgroundColor: '#edefee'}}>
-        haha
+        <div class="d-flex flex-column">
+        {Catalog.map((item)=> {
+          return(
+            <div class="MenuSectionCatalog" key={item.id} onClick={()=>pickCatalog(item.id)}>
+              <img src={item.icon}/> {item.name}
+            </div>
+          )
+        })}
+        </div>
       </div>
       <div class="panel2 col-8">
-        lol
+        {/* checking if one catagory is picked */}
+        {(catalog == 0) ? 'Go wild by picking one catagory!' :
+        // if picked render the following elements
+        <div class="row" style={{padding: 0, margin: 0}}>
+          {Catalog.map((item) => (
+            ((item.id === catalog) && (
+            <>
+            {/* loop through for specific catagory */}
+            {item.list.map((miniItem) => (
+              <div class="MenuSectionCatalog col-4">
+              <img src={miniItem.icon}/> {miniItem.name}
+            </div>
+            ))}
+            </>))
+          ))}
+        </div>
+        }
       </div>
     </div>
   );
