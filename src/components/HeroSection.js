@@ -3,8 +3,8 @@ import img from "../assets/restaurantfood.jpg";
 import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
-    <div class="HeroSection">
-      <div class="HeroTextRegion">
+    <div class="HeroSection" style={{backgroundImage:{img}}}>
+      <div class="HeroTextRegion d-flex flex-column">
         <h2>Little Lemon</h2>
         <h3>California</h3>
         <p>

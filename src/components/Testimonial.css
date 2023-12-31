@@ -6,11 +6,11 @@
 }
 
 
-h3 {
+.title {
     text-align: center;
 }
 
-.people{
+.people {
     display: flex;
     flex-direction: row;
     width: 80%;

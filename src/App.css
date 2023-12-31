@@ -1,3 +1,4 @@
+
 nav {
   display: flex;
   flex-direction: row;
@@ -14,20 +15,51 @@ nav {
 }
 
 .nav-item {
-  padding: 30px;
+  padding: 15px;
   border-radius: 16px;
   text-decoration: none;
   color: black;
   font-size: 20px;
   transition: background-color 0.5s;
-  
 }
 
 .nav-item:hover {
   background-color: #F4ce14;
 }
 
+@media (max-width: 768px) {
+  nav{
+    flex-direction: column;
+  }
+  .lemonLogo {
+    margin: 0 auto;
+  }
+  .nav-links-group {
+    flex-direction: column;
+    gap: 10px;
+    align-self: center;
+    text-align: center;
+  }
+  .nav-item{
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .HeroSection .restaurantImage{
+    visibility: hidden;
+  }
+
+  .HeroSection{
+    flex-direction: column;
+    overflow-y:scroll;
+  }
+
+}
+
 .HeroSection {
+  /* background: url('./assets/diningBest.avif'); */
+  position: relative;
   width: 90%;
   height: 300px;
   border-radius: 10px;
@@ -36,7 +68,6 @@ nav {
   background-color: #495E57;
   color: white;
   display: flex;
-  position: relative;
   margin-bottom: 100px;
 }
 
@@ -61,7 +92,3 @@ nav {
   text-wrap:wrap;
 }
 
-.HeroTextRegion button{
-  width: 20%;
-  text-wrap:wrap;
-}

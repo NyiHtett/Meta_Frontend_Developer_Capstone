@@ -4,11 +4,10 @@ import Main from "../pages/Main";
 import { Router, Route, Routes, Link } from "react-router-dom";
 
 const Nav = () => {
-
   return (
     <nav>
       {/* logo image */}
-      <Link to="/">
+      <Link to="/" class = "lemonLogo">
         <img src={img} width={300} alt="little lemon logo image" />
       </Link>
 

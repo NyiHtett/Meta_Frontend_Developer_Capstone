@@ -5,7 +5,7 @@ import "./Testimonial.css";
 const Testimonial = () => {
   return (
     <div className="TestimonialGroup">
-      <h3>Testimonials</h3>
+      <h3 class="title">Testimonials</h3>
       <div class="people">
         {Client.map((person) => {
           return (
@@ -29,8 +29,7 @@ const Testimonial = () => {
                       marginTop: "12px",
                     }}
                   />
-                  <p style={{marginTop:30}}
-                  >{person.Comment}</p>
+                  <p style={{ marginTop: 30 }}>{person.Comment}</p>
                 </div>
                 <p>{person.name}</p>
               </div>

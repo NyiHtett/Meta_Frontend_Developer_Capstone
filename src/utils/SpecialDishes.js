@@ -1,6 +1,6 @@
-import Bruschetta from '../assets/SpecialDishes/Bruschetta.jpeg';
-import GreekSalad from '../assets/SpecialDishes/greek salad.jpg';
-import LemonDessert from '../assets/SpecialDishes/lemon dessert.jpg';
+import Bruschetta from "../assets/SpecialDishes/Bruschetta.jpeg";
+import GreekSalad from "../assets/SpecialDishes/greek salad.jpg";
+import LemonDessert from "../assets/SpecialDishes/lemon dessert.jpg";
 
 export const SpecialDishes = [
   {
@@ -28,6 +28,6 @@ export const SpecialDishes = [
       "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
     image: LemonDessert,
     price: "$5.00",
-    priceInt: 5.00,
+    priceInt: 5.0,
   },
 ];

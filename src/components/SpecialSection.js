@@ -12,12 +12,13 @@ const SpecialSection = () => {
           Online Menu
         </button>
       </div>
-      <div class="specialDishes">
+      <div class="container">
+      <div class="specialDishes row">
         {/* display dishes using manual database and the concept of data structure for code effiency */}
         {SpecialDishes.map((dish) => {
           return (
-            <div class="card" style={{ width: "18rem"}}>
-              <img class="card-img-top" src={dish.image} alt="Card image cap"  height={200}/>
+            <div class="card col-4" style={{ width: "18rem", padding: 0}}>
+              <img class="card-img-top" src={dish.image} alt="Card image cap" height={200}/>
               <div class="card-body">
                 <h5 class="card-title">{dish.title}</h5>
                 <p class="card-text">
@@ -30,6 +31,7 @@ const SpecialSection = () => {
             </div>
           );
         })}
+      </div>
       </div>
     </div>
   );
