@@ -6,10 +6,10 @@ const Testimonial = () => {
   return (
     <div className="TestimonialGroup">
       <h3 class="title">Testimonials</h3>
-      <div class="people">
+      <div class="people row">
         {Client.map((person) => {
           return (
-            <div class="card w-25">
+            <div class="col-lg-5 col-sm-12">
               <div class="card-body">
                 <h5 class="card-rating">
                   {Array.from({ length: person.rating }, (_, i) => (

@@ -36,3 +36,13 @@
     flex-direction: row;
     margin-bottom: 50px;
 }
+
+@media (max-width: 768px) {
+    .footer{
+        flex-direction: column;
+    }
+
+    .footer-nav-group {
+        flex-direction: column;
+    }
+}
