@@ -43,11 +43,12 @@ const MenuSection = () => {
                       class="MenuSectionCatalog col-4"
                       onClick={() => {
                         addItem(miniItem);
-                        toast(miniItem.name + " is added to the cart");
+                        toast(miniItem.name + " is added to the cart", {autoClose:2000});
                       }}
                     >
-                      <ToastContainer />
+                      
                       <img src={miniItem.image} /> {miniItem.name}
+                      <ToastContainer />
                     </div>
                   ))}
                 </>
