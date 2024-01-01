@@ -9,11 +9,17 @@ export const CartProvider = ({ children }) => {
     setItems([...items, newItem]);
   }
 
+  const removeItem = (deleteItem) => {
+    const updatedItem = items.filter((item) => item.name !== deleteItem.name);
+    setItems(updatedItem);
+  }
+
   return (
     <CartContext.Provider
       value={{
         items,
         addItem,
+        removeItem
       }}
     >
       {children}

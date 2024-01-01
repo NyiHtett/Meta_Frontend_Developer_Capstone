@@ -21,23 +21,28 @@ export const Catalog = [
         list: [
             {
                 name: "Hamburger",
-                icon: Ham,
+                image: Ham,
+                price: 5
             },
             {
                 name: "Pizza",
-                icon: "https://img.icons8.com/3d-fluency/94/salami-pizza.png"
+                image: "https://img.icons8.com/3d-fluency/94/salami-pizza.png",
+                price: 2
             },
             {
                 name: "HotDog",
-                icon: HotDog
+                image: HotDog,
+                price: 2
             },
             {
                 name: "Noodle",
-                icon: Noodle
+                image: Noodle,
+                price: 1
             },
             {
                 name: "Egg Fry",
-                icon: EggFry
+                image: EggFry,
+                price: 0.5
             }
         ]
     },
@@ -48,35 +53,43 @@ export const Catalog = [
         list: [
             {
                 name: "Avocado",
-                icon: Avocado
+                image: Avocado,
+                price: 2
             },
             {
                 name: "Banana",
-                icon: Banana
+                image: Banana,
+                price: 3
             },
             {
                 name: "Citrus",
-                icon: Citrus
+                image: Citrus,
+                price: 4
             },
             {
                 name: "Coconut",
-                icon: Coconut
+                image: Coconut,
+                price: 5
             },
             {
                 name: "Watermellon",
-                icon: Water
+                image: Water,
+                price: 1
             },
             {
                 name: "Pome",
-                icon: Pome
+                image: Pome,
+                price: 1
             },
             {
                 name: "Orange",
-                icon: Orange
+                image: Orange,
+                price: 2
             },
             {
                 name: "Vegetarian Food",
-                icon: "https://img.icons8.com/3d-fluency/94/vegetarian-food.png"
+                image: "https://img.icons8.com/3d-fluency/94/vegetarian-food.png",
+                price: 5
             },
         ]
     },
@@ -87,15 +100,18 @@ export const Catalog = [
         list: [
             {
                 name: "Cupcake",
-                icon: "https://img.icons8.com/3d-fluency/94/cupcake.png"
+                image: "https://img.icons8.com/3d-fluency/94/cupcake.png",
+                price: 8
             },
             {
                 name: "Croissant",
-                icon: "https://img.icons8.com/isometric/94/croissant.png"
+                image: "https://img.icons8.com/isometric/94/croissant.png",
+                price: 3
             },
             {
                 name: "Doughnut",
-                icon: "https://img.icons8.com/3d-fluency/94/doughnut.png"
+                image: "https://img.icons8.com/3d-fluency/94/doughnut.png",
+                price: 10
             }
         ]
     },
@@ -106,11 +122,13 @@ export const Catalog = [
         list: [
             {
                 name: "Prawn",
-                icon: "https://img.icons8.com/3d-fluency/94/prawn.png"
+                image: "https://img.icons8.com/3d-fluency/94/prawn.png",
+                price: 10
             },
             {
                 name: "Crab",
-                icon: "https://img.icons8.com/3d-fluency/94/crab.png"
+                image: "https://img.icons8.com/3d-fluency/94/crab.png",
+                price: 10
             }
         ]
     }

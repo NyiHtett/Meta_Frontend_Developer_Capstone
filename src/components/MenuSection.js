@@ -1,40 +1,58 @@
 import React, { useState } from "react";
 import { Catalog } from "../utils/Catalog";
-import './MenuSection.css';
-import { Juice } from "../utils/Juice";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import "./MenuSection.css";
+import { Link } from "react-router-dom";
+import { useCart } from "../CartContext";
 const MenuSection = () => {
   const [catalog, pickCatalog] = useState(1);
+  const { items, addItem } = useCart([]);
   return (
-    <div class="container d-flex flex-row" style={{margin:0, padding: 0}}>
-      <div class="panel1 col-4" style={{backgroundColor: '#edefee'}}>
+    <div class="container d-flex flex-row" style={{ margin: 0, padding: 0 }}>
+      <div class="panel1 col-4" style={{ backgroundColor: "#edefee" }}>
         <div class="d-flex flex-column">
-        {Catalog.map((item)=> {
-          return (
-            <div
-              class={`MenuSectionCatalog ${(catalog == item.id) ? "ClickedMenuCatalog" : ""}`}
-              key={item.id}
-              onClick={() => pickCatalog(item.id)}
-            >
-              <img src={item.icon} /> {item.name}
-            </div>
-          );
-        })}
+          {Catalog.map((item) => {
+            return (
+              <div
+                class={`MenuSectionCatalog ${
+                  catalog == item.id ? "ClickedMenuCatalog" : ""
+                }`}
+                key={item.id}
+                onClick={() => {
+                  pickCatalog(item.id);
+                }}
+              >
+                <img src={item.icon} /> {item.name}
+              </div>
+            );
+          })}
         </div>
       </div>
       <div class="panel2 col-8">
         {/* checking if one catagory with specific number is picked */}
-        <div class="row" style={{padding: 0, margin: 0}}>
-          {Catalog.map((item) => (
-            ((item.id === catalog) && (
-            <>
-            {/* loop through for specific catagory */}
-            {item.list.map((miniItem) => (
-              <div class="MenuSectionCatalog col-4">
-              <img src={miniItem.icon}/> {miniItem.name}
-            </div>
-            ))}
-            </>))
-          ))}
+        <div class="row" style={{ padding: 0, margin: 0 }}>
+          {Catalog.map(
+            (item) =>
+              item.id === catalog && (
+                <>
+                  {/* loop through for specific catagory */}
+                  {item.list.map((miniItem) => (
+                    <div
+                      style={{ textDecoration: "none", color: "black" }}
+                      class="MenuSectionCatalog col-4"
+                      onClick={() => {
+                        addItem(miniItem);
+                        toast(miniItem.name + " is added to the cart");
+                      }}
+                    >
+                      <ToastContainer />
+                      <img src={miniItem.image} /> {miniItem.name}
+                    </div>
+                  ))}
+                </>
+              )
+          )}
         </div>
       </div>
     </div>
@@ -43,7 +61,8 @@ const MenuSection = () => {
 
 export default MenuSection;
 
-{/* <div class="container d-flex flex-row" style={{gap: '20px', margin: '15px auto'}}>
+{
+  /* <div class="container d-flex flex-row" style={{gap: '20px', margin: '15px auto'}}>
       {Juice.map((item) => {
         return (
           <div class="card" style={{width: "10rem", boxShadow: '1px 1px 1px black'}}>
@@ -60,4 +79,5 @@ export default MenuSection;
           </div>
         );
       })}
-    </div> */}
+    </div> */
+}

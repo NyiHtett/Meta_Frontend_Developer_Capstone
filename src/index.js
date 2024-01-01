@@ -11,6 +11,7 @@ import Reserve from './pages/Reserve';
 import Checkout from './pages/Checkout';
 import { CartProvider } from './CartContext';
 
+
 const router = createBrowserRouter([
   {
     path:"/",
