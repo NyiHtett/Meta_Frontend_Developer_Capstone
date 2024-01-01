@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Catalog } from "../utils/Catalog";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./MenuSection.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../CartContext";
@@ -43,10 +43,11 @@ const MenuSection = () => {
                       class="MenuSectionCatalog col-4"
                       onClick={() => {
                         addItem(miniItem);
-                        toast(miniItem.name + " is added to the cart", {autoClose:2000});
+                        toast(miniItem.name + " is added to the cart", {
+                          autoClose: 2000,
+                        });
                       }}
                     >
-                      
                       <img src={miniItem.image} /> {miniItem.name}
                       <ToastContainer />
                     </div>

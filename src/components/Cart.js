@@ -2,9 +2,11 @@ import React from "react";
 import { useCart } from "../CartContext";
 
 const Cart = () => {
-  const { items, removeItem } = useCart();
+  const { items, removeItem } = useCart([]);
   return (
-    <>
+    <div>
+      { items.length > 0 && 
+      <div>
       <div class="row m-3" style={{ overflowX: "auto", whiteSpace: "nowrap" }}>
         {items.map((item) => {
           return (
@@ -31,8 +33,9 @@ const Cart = () => {
           );
         })}
       </div>
-      <div>total price is:</div>
-    </>
+      <div style={{textAlign:'center', margin:"50px"}}>total price is:</div>
+      </div>}
+    </div>
   );
 };
 
