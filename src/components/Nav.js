@@ -2,8 +2,10 @@ import React from "react";
 import img from "../assets/Logo.png";
 import Main from "../pages/Main";
 import { Router, Route, Routes, Link } from "react-router-dom";
+import { useCart } from "../CartContext";
 
 const Nav = () => {
+  const {items} = useCart();
   return (
     <nav>
       {/* logo image */}
@@ -26,7 +28,7 @@ const Nav = () => {
           Reserve
         </Link>
         <Link to="/Checkout" className="nav-item">
-          Checkout
+        <img style={{marginRight:'5px'}} src="https://img.icons8.com/3d-fluency/50/shopping-cart.png" alt="shopping-cart"/>  {items.length}
         </Link>
       </div>
     </nav>

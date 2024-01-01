@@ -24,6 +24,10 @@ export const Catalog = [
                 icon: Ham,
             },
             {
+                name: "Pizza",
+                icon: "https://img.icons8.com/3d-fluency/94/salami-pizza.png"
+            },
+            {
                 name: "HotDog",
                 icon: HotDog
             },
@@ -59,7 +63,7 @@ export const Catalog = [
                 icon: Coconut
             },
             {
-                name: "Water",
+                name: "Watermellon",
                 icon: Water
             },
             {
@@ -70,16 +74,44 @@ export const Catalog = [
                 name: "Orange",
                 icon: Orange
             },
+            {
+                name: "Vegetarian Food",
+                icon: "https://img.icons8.com/3d-fluency/94/vegetarian-food.png"
+            },
         ]
     },
     {
         id: 3,
         name: "Pastry",
-        icon: Pie
+        icon: Pie,
+        list: [
+            {
+                name: "Cupcake",
+                icon: "https://img.icons8.com/3d-fluency/94/cupcake.png"
+            },
+            {
+                name: "Croissant",
+                icon: "https://img.icons8.com/isometric/94/croissant.png"
+            },
+            {
+                name: "Doughnut",
+                icon: "https://img.icons8.com/3d-fluency/94/doughnut.png"
+            }
+        ]
     },
     {
         id: 4,
         name: "Seafood",
-        icon: octopus
+        icon: octopus,
+        list: [
+            {
+                name: "Prawn",
+                icon: "https://img.icons8.com/3d-fluency/94/prawn.png"
+            },
+            {
+                name: "Crab",
+                icon: "https://img.icons8.com/3d-fluency/94/crab.png"
+            }
+        ]
     }
 ]

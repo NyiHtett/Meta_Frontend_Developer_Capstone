@@ -9,6 +9,7 @@ import About from './pages/About';
 import Menu from './pages/Menu';
 import Reserve from './pages/Reserve';
 import Checkout from './pages/Checkout';
+import { CartProvider } from './CartContext';
 
 const router = createBrowserRouter([
   {
@@ -37,9 +38,11 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <CartProvider>
     <RouterProvider router={router}>
     <App />
     </RouterProvider>
+    </CartProvider>
   </React.StrictMode>
 );
 
