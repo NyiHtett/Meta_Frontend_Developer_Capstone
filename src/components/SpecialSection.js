@@ -9,9 +9,9 @@ const SpecialSection = () => {
     <div>
       <div class="specialTextRegion">
         <h3>Specials</h3>
-        <button type="button" class="btn btn-dark">
+        <Link to="/Menu" type="button" class="btn btn-dark">
           Online Menu
-        </button>
+        </Link>
       </div>
       <div class="container">
         <div class="specialDishes row">
